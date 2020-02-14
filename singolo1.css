@@ -14,6 +14,7 @@ body > * {
 
 .block {
     margin: 0 auto;
+    width: 940px;
 }
 
 .head {
@@ -24,7 +25,6 @@ body > * {
 }
 
 .head-content {
-    width: 940px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +83,6 @@ body > * {
 }
 
 .slider-content {
-    width: 940px;
     display: grid;
     grid-template-columns: 18px auto 18px;
 }
@@ -92,9 +91,6 @@ body > * {
     padding-top: 228px;
     padding-left: 2px;
 }
-
-/* .slider-back {
-} */
 
 .slider-img {
     display: flex;
@@ -138,4 +134,95 @@ body > * {
 
 .slider-img-horizontal-shadow {
     transform: translateY(-26px) scale(1, -1);
+}
+
+.services {
+    background-color: #f2f2f2;
+    padding-top: 55px;
+}
+
+.services-content p {
+    color: #767e9e;
+    font-family: 'latoregular';
+}
+
+.services-content > h2 {
+    font-size: 30px;
+    margin-bottom: 17px;
+    color: #666d89;
+    font-family: 'latoblack';
+    letter-spacing: 0.04px;
+}
+
+.services-content > p {
+    font-size: 18px;
+    font-family: 'latolight';
+    margin-bottom: 45px;
+    letter-spacing: -0.049px;
+    line-height: 29px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-column-gap: 20px;
+    grid-row-gap: 37px;
+    list-style: none;
+    padding-bottom: 67px;
+    border-bottom: 6px solid #ffffff;
+}
+
+.services-list li {
+    display: flex;
+    height: 87px;
+}
+
+.services-list li::before {
+    content: '';
+    background-size: 60.5px;
+    width: 60.5px;
+    height: 60.5px;
+    margin-left: -1px;
+}
+
+.services-list li:nth-child(1)::before {
+    background: url("assets/pen.svg");
+}
+
+.services-list li:nth-child(2)::before {
+    background: url("assets/lamp.svg");
+}
+
+.services-list li:nth-child(3)::before {
+    background: url("assets/heart.svg");
+}
+
+.services-list li:nth-child(4)::before {
+    background: url("assets/phone.svg");
+}
+
+.services-list li:nth-child(5)::before {
+    background: url("assets/bumble.svg");
+}
+
+.services-list li:nth-child(6)::before {
+    background: url("assets/star.svg");
+}
+
+.services-list-text {
+    width: 218px;
+    margin-left: 20px;
+}
+
+.services-list-text h3 {
+    color: #666d89;
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+}
+
+.services-list-text p {
+    font-size: 12px;
+    line-height: 20px;
 }
