@@ -297,5 +297,40 @@ h2 {
 	grid-template-columns: repeat(4, 220px);
 	grid-template-rows: repeat(3, 187px);
 	grid-gap: 20px;
-	/* margin-bottom: 15px; */
+}
+
+.about-us-wrapper {
+	background-color: #f2f2f2;
+}
+
+.about-us h2 {
+	padding-top: 55px;
+	padding-left: 1px;
+	word-spacing: -1.5px;
+	color: #666d89
+}
+
+.about-us > p {
+	color: #767e9e;
+	padding-top: 14px;
+	padding-bottom: 45px;
+	text-align: justify;
+	word-spacing: -2px;
+	letter-spacing: -0.03px;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+.about-us-peoples {
+	display: grid;
+	grid-template-columns: 300px 302px 300px;
+	grid-column-gap: 19px;
+}
+
+.about-us-people__name {
+	font-family: "latoblack", Helvetica;
+	font-size: 18px;
+	color: #666d89;
+	padding-top: 14px;
+	padding-top: 8px;
 }
