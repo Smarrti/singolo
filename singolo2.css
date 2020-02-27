@@ -290,6 +290,18 @@ h2 {
 	letter-spacing: -0.2px;
 	border: 1px solid #666d89;
 	border-radius: 6px;
+	cursor: pointer;
+}
+
+.portfolio-tags li:hover {
+	color: #dedede;
+	border: 1px solid #dedede;
+	transition: color 0.5s, border 0.5s;
+}
+
+.portfolio-tags_active {
+	color: #dedede;
+	border: 1px solid #dedede !important;
 }
 
 .portfolio-images {
@@ -297,6 +309,20 @@ h2 {
 	grid-template-columns: repeat(4, 220px);
 	grid-template-rows: repeat(3, 187px);
 	grid-gap: 20px;
+}
+
+.portfolio-images img:nth-child(13),
+.portfolio-images img:nth-child(14),
+.portfolio-images img:nth-child(15),
+.portfolio-images img:nth-child(16),
+.portfolio-images img:nth-child(17) {
+	display: none;
+}
+
+.portfolio-images img:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: transform 1s;
 }
 
 .about-us-wrapper {
@@ -332,8 +358,12 @@ h2 {
 .about-us-people__name {
 	padding-top: 8px;
 	font-family: "latoblack", Helvetica;
-	font-size: 18px;
+	font-size: 0px;
 	color: #666d89;
+}
+
+.about-us-people__name p:first-line {
+	font-size: 18px;
 }
 
 .about-us-people__note p {
@@ -353,6 +383,7 @@ h2 {
 
 .about-us-people__social {
 	margin-top: 26px;
+	cursor: pointer;
 }
 
 .about-us-people:not(:last-child) .about-us-people__social {
@@ -369,6 +400,12 @@ h2 {
     border: 1px solid #666d89;
     background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
+}
+
+.about-us-people__social > span:hover {
+    border-radius: 25%;
+    border: 1px solid #f06c64;
+	transition: border-radius 0.5s, border 0.5s;
 }
 
 .about-us-people__social > span:nth-child(1) {
