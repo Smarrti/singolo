@@ -470,6 +470,15 @@ h2 {
 	resize: none;
 }
 
+.form-inputs button {
+    padding: 12px 50px;
+    font-size: 18px;
+    color: #f0d8d9;
+    background-color: #d6564f;
+	border: none;
+    border-radius: 6px;
+}
+
 .form-inputs input::placeholder,
 .form-inputs textarea::placeholder {
 	color: #f48c8f;
@@ -503,6 +512,11 @@ h2 {
 .contact-icons {
     padding-bottom: 6px;
     letter-spacing: -0.15px;
+}
+
+.contact-icons a {
+	color: #f0d8d9;
+	text-decoration: none;
 }
 
 .contact-icons:before {
