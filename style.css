@@ -62,7 +62,7 @@ body > * {
 }
 
 .head-content-menu ul li:hover {
-	text-decoration: underline;
+	color: #f06c64;
 }
 
 .head-content-menu ul li:not(:last-child) {
@@ -312,11 +312,7 @@ h2 {
 	grid-gap: 20px;
 }
 
-.portfolio-images img:nth-child(13),
-.portfolio-images img:nth-child(14),
-.portfolio-images img:nth-child(15),
-.portfolio-images img:nth-child(16),
-.portfolio-images img:nth-child(17) {
+.portfolio-images img:nth-child(1n + 13) {
 	display: none;
 }
 
