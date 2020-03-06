@@ -403,19 +403,19 @@ h2 {
 }
 
 .social > span:nth-child(1) {
-    background: url('assets/social/facebook.png');
+    background: url("assets/social/facebook.png");
 }
 
 .social > span:nth-child(2) {
-    background: url('assets/social/google+.png');
+    background: url("assets/social/google+.png");
 }
 
 .social > span:nth-child(3) {
-    background: url('assets/social/twitter.png');
+    background: url("assets/social/twitter.png");
 }
 
 .social > span:nth-child(4) {
-    background: url('assets/social/linkedin.png');
+    background: url("assets/social/linkedin.png");
 }
 
 .form-wrapper {
@@ -516,7 +516,7 @@ h2 {
 }
 
 .contact-icons:before {
-	content: '';
+	content: "";
 	display: inline-block;
 	width: 13px;
 	height: 11px;
@@ -526,15 +526,15 @@ h2 {
 }
 
 .contact__address:before {
-	background-image: url('assets/contacts/01.png');
+	background-image: url("assets/contacts/01.png");
 }
 
 .contact__phone:before {
-	background-image: url('assets/contacts/02.png');
+	background-image: url("assets/contacts/02.png");
 }
 
 .contact__mail:before {
-	background-image: url('assets/contacts/03.png');
+	background-image: url("assets/contacts/03.png");
 }
 
 .footer-wrapper {
