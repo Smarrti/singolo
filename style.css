@@ -198,31 +198,31 @@ h2 {
 }
 
 .services-list li:nth-child(1)::before {
-	background: url("assets/pen.png");
+	background: url("assets/services/pen.png");
 }
 
 .services-list li:nth-child(2)::before {
-	background: url("assets/lamp.png");
+	background: url("assets/services/lamp.png");
 }
 
 .services-list li:nth-child(3)::before {
 	margin-left: 2.5px;
 	margin-right: -1px;
-	background: url("assets/heart.png");
+	background: url("assets/services/heart.png");
 }
 
 .services-list li:nth-child(4)::before {
-	background: url("assets/phone-serv.png");
+	background: url("assets/services/phone-serv.png");
 }
 
 .services-list li:nth-child(5)::before {
-	background: url("assets/bumble.png");
+	background: url("assets/services/bumble.png");
 }
 
 .services-list li:nth-child(6)::before {
 	margin-left: 2.5px;
 	margin-right: -1px;
-	background: url("assets/star.png");
+	background: url("assets/services/star.png");
 }
 
 .services-list-text {
@@ -378,10 +378,9 @@ h2 {
     text-align: justify;
     letter-spacing: -0.199px;
     line-height: 20px;
-    word-spacing: 0.4px;
+	word-spacing: 0.4px;
+	color: #767e9e;
 }
-
-
 
 .social > span {
     display: inline-flex;
