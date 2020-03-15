@@ -90,7 +90,6 @@ portfolioImages.forEach((e) => {
 const formSubmit = document.querySelector('.form-inputs button');
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault();
-    let name = document.querySelector('input[name=form-name]').value;
     let subject = document.querySelector('input[name=form-subject]').value;
     let message = document.querySelector('textarea[name=form-message]').value;
     let modal = document.querySelector('.modal');
@@ -98,11 +97,25 @@ formSubmit.addEventListener('click', (e) => {
     while(modalMessage.firstChild) {
         modalMessage.removeChild(modalMessage.firstChild);
     }
-    modalMessage.innerHTML = '<p>Имя: ' + name + '</p><p>Тема: ' + subject + '</p><p>Сообщение: ' + message + '</p>';
+    if (subject != '') {
+        modalMessage.innerHTML += '<p>Тема: ' + subject + '</p>';
+    } else {
+        modalMessage.innerHTML += '<p>Без темы</p>';
+    }
+    if (message != '') {
+        modalMessage.innerHTML += '<p>Описание: ' + subject + '</p>';
+    } else {
+        modalMessage.innerHTML += '<p>Без описания</p>';
+    }
     modal.classList.remove('modal_closed');
 })
 
 document.querySelector('.modal-hide').addEventListener('click', () => {
+    let modal = document.querySelector('.modal');
+    modal.classList.add('modal_closed');
+})
+
+document.querySelector('.modal').addEventListener('click', () => {
     let modal = document.querySelector('.modal');
     modal.classList.add('modal_closed');
 })
