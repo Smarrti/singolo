@@ -195,10 +195,10 @@
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 			<div class="layout-2-columns">
 				<form class="form-inputs" method="POST"><br>
-					<input type="text" placeholder="Name (Required)" required><br>
-					<input type="email" placeholder="Email (Required)" required><br>
-					<input type="text" placeholder="Subject"><br>
-					<textarea cols="30" rows="12" placeholder="Describe your project in detail..."></textarea>
+					<input type="text" name="form-name" placeholder="Name (Required)" required><br>
+					<input type="email" name="form-email" placeholder="Email (Required)" required><br>
+					<input type="text" name="form-subject" placeholder="Subject"><br>
+					<textarea cols="30" rows="12" name="form-message" placeholder="Describe your project in detail..."></textarea>
 					<button type="submit">Submit</button>
 				</form>
 				<section class="contact">
@@ -224,6 +224,17 @@
 			</div>
 		</div>
 	</footer>
+	<div class="modal modal_closed">
+		<div class="modal-window">
+			<p class="modal-hide">X</p>
+			<p class="message-head">Письмо отправлено</p>
+			<div class="modal-message">
+				<p>fgdf</p>
+				<p>fgdf</p>
+				<p>fgdf</p>
+			</div>
+		</div>
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>

@@ -86,3 +86,23 @@ portfolioImages.forEach((e) => {
         event.target.classList.add('portfolio-image_bordered');
     })
 })
+
+const formSubmit = document.querySelector('.form-inputs button');
+formSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    let name = document.querySelector('input[name=form-name]').value;
+    let subject = document.querySelector('input[name=form-subject]').value;
+    let message = document.querySelector('textarea[name=form-message]').value;
+    let modal = document.querySelector('.modal');
+    let modalMessage = document.querySelector('.modal-message');
+    while(modalMessage.firstChild) {
+        modalMessage.removeChild(modalMessage.firstChild);
+    }
+    modalMessage.innerHTML = '<p>Имя: ' + name + '</p><p>Тема: ' + subject + '</p><p>Сообщение: ' + message + '</p>';
+    modal.classList.remove('modal_closed');
+})
+
+document.querySelector('.modal-hide').addEventListener('click', () => {
+    let modal = document.querySelector('.modal');
+    modal.classList.add('modal_closed');
+})
