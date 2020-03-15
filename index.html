@@ -16,21 +16,21 @@
 			</div>
 			<nav class="head-content-menu">
 				<ul>
-					<li class="head-content-menu-selected">HOME</li>
-					<li>SERVICES</li>
-					<li>PORTFOLIO</li>
-					<li>ABOUT</li>
-					<li>CONTACT</li>
+					<li class="head-content-menu-selected"><a class="nav-url" href="#home">HOME</a></li>
+					<li><a class="nav-url" href="#services">SERVICES</a></li>
+					<li><a class="nav-url" href="#portfolio">PORTFOLIO</a></li>
+					<li><a class="nav-url" href="#about-us">ABOUT</a></li>
+					<li><a class="nav-url" href="#contact">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<main class="slider">
+	<div class="slider" id="home">
 		<div class="slider-content block">
 			<div class="slider-button slider-back">
 				<img src="assets/chev.png" alt="Button Back">
 			</div>
-			<div class="slider-img">
+			<div class="slider-img slider_first">
 				<div class="slider-img-vertical">
 					<img class="slider-img-vertical-phone" src="assets/phone/phone.png" alt="Phone">
 					<img class="slider-img-vertical-shadow" src="assets/phone/phone-shadow.png" alt="Phone">
@@ -42,12 +42,15 @@
 					<img class="slider-img-horizontal-background" src="assets/phone/background-horizontal.png" alt="Phone">
 				</div>
 			</div>
+			<div class="slider-img slider_second slider_hidden">
+				<img src="assets/phone/phone2.png" alt="phone">
+			</div>
 			<div class="slider-button slider-forward">
 				<img src="assets/chev.png" alt="Button Forward">
 			</div>
 		</div>
-	</main>
-	<div class="services">
+	</div>
+	<div class="services" id="services">
 		<div class="services-content block">
 			<h2>Our Services</h2>
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
@@ -101,7 +104,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="portfolio-wrapper">
+	<div class="portfolio-wrapper" id="portfolio">
 		<section class="portfolio block">
 			<h2>Portfolio</h2>
 			<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -127,7 +130,7 @@
 			</div>
 		</section>
 	</div>
-	<div class="about-us-wrapper">
+	<div class="about-us-wrapper" id="about-us">
 		<section class="about-us block">
 			<h2>About Us</h2>
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -186,16 +189,16 @@
 			</div>
 		</section>
 	</div>
-	<div class="form-wrapper">
+	<div class="form-wrapper" id="contact">
 		<section class="form block">
 			<h2>Get a Quote</h2>
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 			<div class="layout-2-columns">
 				<form class="form-inputs" method="POST"><br>
-					<input type="text" placeholder="Name (Required)" required><br>
-					<input type="email" placeholder="Email (Required)" required><br>
-					<input type="text" placeholder="Subject"><br>
-					<textarea cols="30" rows="12" placeholder="Describe your project in detail..."></textarea>
+					<input type="text" name="form-name" placeholder="Name (Required)" required><br>
+					<input type="email" name="form-email" placeholder="Email (Required)" required><br>
+					<input type="text" name="form-subject" placeholder="Subject"><br>
+					<textarea cols="30" rows="12" name="form-message" placeholder="Describe your project in detail..."></textarea>
 					<button type="submit">Submit</button>
 				</form>
 				<section class="contact">
@@ -221,5 +224,17 @@
 			</div>
 		</div>
 	</footer>
+	<div class="modal modal_closed">
+		<div class="modal-window">
+			<p class="modal-hide">X</p>
+			<p class="message-head">Письмо отправлено</p>
+			<div class="modal-message">
+				<p>fgdf</p>
+				<p>fgdf</p>
+				<p>fgdf</p>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
