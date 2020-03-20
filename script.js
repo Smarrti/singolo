@@ -108,6 +108,10 @@ formSubmit.addEventListener('click', (e) => {
         modalMessage.innerHTML += '<p>Без описания</p>';
     }
     modal.classList.remove('modal_closed');
+    const formItems = document.querySelectorAll('.form-inputs > *');
+    formItems.forEach((e) => {
+        e.value = ''
+    });
 })
 
 document.querySelector('.modal-hide').addEventListener('click', () => {
