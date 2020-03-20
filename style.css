@@ -73,6 +73,10 @@ body > * {
 	cursor: pointer;
 }
 
+.head-content-menu ul li a {
+	transition: all 0.3s;
+}
+
 .head-content-menu ul li a:hover {
 	color: #f06c64;
 }
@@ -124,7 +128,7 @@ body > * {
 
 .slider-img {
 	display: flex;
-	transition: all 0.5s;
+	transition: all 0.5s ease-out;
 }
 
 .slider_second {
