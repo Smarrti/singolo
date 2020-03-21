@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	transition: all 0.5s ease-out;
 }
 
 html,
@@ -128,9 +129,7 @@ body > * {
 
 .slider-img {
 	display: flex;
-	transition: all 0.5s ease-out;
 }
-
 .slider_second {
 	margin: auto;
 }
@@ -640,4 +639,86 @@ h2 {
 .message-head {
 	font-family: "latobold", Verdana, sans-serif;
 	font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+	.block {
+		width: 90%;
+	}
+
+	.slider {
+		height: 462px;
+		margin-top: 25.5px;
+	}
+
+	.slider-img-vertical {
+		margin-left: 3px;
+		transform: scale(0.75);
+	}
+
+	.slider-img-horizontal {
+		margin-left: -54px;
+		transform: translateX(165px) rotate(90deg) scale(0.75);
+	}
+
+	.slider_second {
+		transform: scale(0.8);
+	}
+
+	.services {
+		padding-top: 35px;
+		padding-bottom: 8px;
+	}
+
+	.services-content > p {
+		margin: 0 0 38px 0.3px;
+	}
+
+	.services-wrapper, .gallery-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.services-list {
+		grid-template-columns: repeat(2, 299px);
+		grid-column-gap: 56px;
+		grid-row-gap: 57px;
+	}
+
+	.portfolio h2 {
+		margin-bottom: 15px;
+	}
+
+	.portfolio p {
+		line-height: 29px;
+	}
+
+	.portfolio-tags {
+		margin-bottom: 27px;
+	}
+
+	.portfolio-images {
+		grid-template-columns: repeat(3, 213px);
+		grid-template-rows: repeat(4, 184px);
+	}
+
+	.portfolio-images > * {
+		width: 215px;
+	}
+
+	.about-us h2 {
+		padding-top: 46px;
+	}
+
+	.about-us > p {
+		padding-bottom: 38px;
+	}
+
+	.about-us-peoples {
+		grid-template-columns: auto auto auto;
+	}
+
+	.about-us-people__photo img {
+		width: 100%;
+	}
 }
