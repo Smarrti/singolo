@@ -90,28 +90,30 @@ portfolioImages.forEach((e) => {
 const formSubmit = document.querySelector('.form-inputs button');
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault();
-    let subject = document.querySelector('input[name=form-subject]').value;
-    let message = document.querySelector('textarea[name=form-message]').value;
-    let modal = document.querySelector('.modal');
-    let modalMessage = document.querySelector('.modal-message');
-    while(modalMessage.firstChild) {
-        modalMessage.removeChild(modalMessage.firstChild);
+    if ((document.querySelector('input[name=form-name]').value != '') && (document.querySelector('input[name=form-email]').value != '')) {
+        let subject = document.querySelector('input[name=form-subject]').value;
+        let message = document.querySelector('textarea[name=form-message]').value;
+        let modal = document.querySelector('.modal');
+        let modalMessage = document.querySelector('.modal-message');
+        while(modalMessage.firstChild) {
+            modalMessage.removeChild(modalMessage.firstChild);
+        }
+        if (subject != '') {
+            modalMessage.innerHTML += '<p>Тема: ' + subject + '</p>';
+        } else {
+            modalMessage.innerHTML += '<p>Без темы</p>';
+        }
+        if (message != '') {
+            modalMessage.innerHTML += '<p>Описание: ' + subject + '</p>';
+        } else {
+            modalMessage.innerHTML += '<p>Без описания</p>';
+        }
+        modal.classList.remove('modal_closed');
+        const formItems = document.querySelectorAll('.form-inputs > *');
+        formItems.forEach((e) => {
+            e.value = ''
+        });
     }
-    if (subject != '') {
-        modalMessage.innerHTML += '<p>Тема: ' + subject + '</p>';
-    } else {
-        modalMessage.innerHTML += '<p>Без темы</p>';
-    }
-    if (message != '') {
-        modalMessage.innerHTML += '<p>Описание: ' + subject + '</p>';
-    } else {
-        modalMessage.innerHTML += '<p>Без описания</p>';
-    }
-    modal.classList.remove('modal_closed');
-    const formItems = document.querySelectorAll('.form-inputs > *');
-    formItems.forEach((e) => {
-        e.value = ''
-    });
 })
 
 document.querySelector('.modal-hide').addEventListener('click', () => {

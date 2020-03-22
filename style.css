@@ -715,10 +715,34 @@ h2 {
 	}
 
 	.about-us-peoples {
-		grid-template-columns: auto auto auto;
+		grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+		padding-bottom: 36px;
 	}
 
 	.about-us-people__photo img {
 		width: 100%;
+	}
+
+	.layout-2-columns {
+		grid-template-columns: calc(100% / 1.63) calc(100% / 3);
+		grid-column-gap: 57px;
+		padding-top: 3px;
+	}
+
+	.form {
+		padding-bottom: 41px;
+	}
+
+	.form h2 {
+		padding-top: 49px;
+	}
+
+	.form-inputs input,
+	.form-inputs textarea {
+		margin-bottom: 12px;
+	}
+
+	.form-inputs textarea {
+		height: 134px;
 	}
 }
