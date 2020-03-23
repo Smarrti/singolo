@@ -132,12 +132,12 @@ document.querySelector('.modal').addEventListener('click', () => {
 
 let burgerButton = document.querySelector('.head-content-burger');
 let sidebar = document.querySelector('.sidebar-wrapper');
-burgerButton.addEventListener('click', (e) => {
-    if (!e.path[1].classList.contains('head-content-burger_active')) {
-        e.path[1].classList.add('head-content-burger_active');
+burgerButton.addEventListener('click', () => {
+    if (!burgerButton.classList.contains('head-content-burger_active')) {
+        burgerButton.classList.add('head-content-burger_active');
         sidebar.classList.add('sidebar-wrapper_opened');
     } else {
-        e.path[1].classList.remove('head-content-burger_active');
+        burgerButton.classList.remove('head-content-burger_active');
         sidebar.classList.remove('sidebar-wrapper_opened');
     }
 })
