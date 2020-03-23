@@ -80,10 +80,14 @@ portfolioTags.forEach((e) => {
 
 portfolioImages.forEach((e) => {
     e.addEventListener('click', (event) => {
-        portfolioImages.forEach((e) => {
-            e.classList.remove('portfolio-image_bordered');
-        })
-        event.target.classList.add('portfolio-image_bordered');
+        if (event.target.classList.contains('portfolio-image_bordered')) {
+            event.target.classList.remove('portfolio-image_bordered');
+        } else {
+            portfolioImages.forEach((e) => {
+                e.classList.remove('portfolio-image_bordered');
+            })
+            event.target.classList.add('portfolio-image_bordered');
+        }
     })
 })
 
@@ -124,4 +128,27 @@ document.querySelector('.modal-hide').addEventListener('click', () => {
 document.querySelector('.modal').addEventListener('click', () => {
     let modal = document.querySelector('.modal');
     modal.classList.add('modal_closed');
+})
+
+let burgerButton = document.querySelector('.head-content-burger');
+let sidebar = document.querySelector('.sidebar-wrapper');
+burgerButton.addEventListener('click', (e) => {
+    if (!e.path[1].classList.contains('head-content-burger_active')) {
+        e.path[1].classList.add('head-content-burger_active');
+        sidebar.classList.add('sidebar-wrapper_opened');
+    } else {
+        e.path[1].classList.remove('head-content-burger_active');
+        sidebar.classList.remove('sidebar-wrapper_opened');
+    }
+})
+
+let sidebarMenu = document.querySelectorAll('.sidebar-menu__url');
+sidebarMenu.forEach((e) => {
+    e.addEventListener('click', (event) => {
+        sidebarMenu.forEach((e) => {
+            e.classList.remove('sidebar-menu__url_selected');
+        })
+        event.target.classList.add('sidebar-menu__url_selected');
+        burgerButton.querySelector('img').click();
+    })
 })
