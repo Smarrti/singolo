@@ -757,7 +757,7 @@ h2 {
 	}
 }
 
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
 	.head {
 		height: 44px;
 		padding-top: 20.5px;
@@ -1018,5 +1018,19 @@ h2 {
 
 	.sidebar-menu__url_selected {
 		color: #F06C64;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+	.slider_first {
+		transform: scale(0.8) translateX(-26px);
+	}
+
+	.portfolio-tags li {
+		margin-bottom: 10px;
+	}
+
+	.form-inputs input, .form-inputs textarea {
+		box-sizing: border-box;
 	}
 }
