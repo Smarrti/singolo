@@ -93,8 +93,8 @@ portfolioImages.forEach((e) => {
 
 const formSubmit = document.querySelector('.form-inputs button');
 formSubmit.addEventListener('click', (e) => {
-    e.preventDefault();
-    if ((document.querySelector('input[name=form-name]').value != '') && (document.querySelector('input[name=form-email]').value != '')) {
+    if ((document.querySelector('input[name=form-name]').checkValidity()) && (document.querySelector('input[name=form-email]').checkValidity())) {        
+        e.preventDefault();
         let subject = document.querySelector('input[name=form-subject]').value;
         let message = document.querySelector('textarea[name=form-message]').value;
         let modal = document.querySelector('.modal');
@@ -136,9 +136,11 @@ burgerButton.addEventListener('click', () => {
     if (!burgerButton.classList.contains('head-content-burger_active')) {
         burgerButton.classList.add('head-content-burger_active');
         sidebar.classList.add('sidebar-wrapper_opened');
+        document.querySelector('body').classList.add('overflow-hidden');
     } else {
         burgerButton.classList.remove('head-content-burger_active');
         sidebar.classList.remove('sidebar-wrapper_opened');
+        document.querySelector('body').classList.remove('overflow-hidden');
     }
 })
 
